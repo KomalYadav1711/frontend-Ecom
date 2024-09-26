@@ -12,7 +12,7 @@ import Context from '../context';
 
 const Login = () => {
 
-  const[Showpassword , setShowpassword] = useState(true); 
+  const[Showpassword , setShowpassword] = useState(false); 
   const[data, setData] = useState({
     email : "",
     password : ""
