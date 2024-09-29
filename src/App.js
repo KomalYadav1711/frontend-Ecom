@@ -32,7 +32,7 @@ function App() {
     console.log("data-user",  dataResponse)
   }
 
-  console.log("fetch", fetchUserDetails)
+ 
 
 
   useEffect(() => {
