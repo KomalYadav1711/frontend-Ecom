@@ -10,6 +10,7 @@ const productCategory = [
     { id : 9, label : "Speakers", value: "speakers"},
     { id : 10, label : "Televisions", value: "televisions"},
     { id : 11, label : "Watches", value: "watches "},
+    { id : 12, label : "Trimmers", value: "trimmers "},
 
     
 
