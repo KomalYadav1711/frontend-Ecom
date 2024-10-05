@@ -100,7 +100,7 @@ const Header = () => {
 
               {
                 user?._id && (
-                  <div className='text-2xl relative '>
+                  <Link to={"/cart"} className='text-2xl relative '>
 
                         <span><FaShoppingCart/></span>
 
@@ -108,7 +108,7 @@ const Header = () => {
                         <div className='bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center absolute -top-2 -right-3'>
                           <p className='text-sm'>{context?.cartProductCount}</p>
                         </div>
-                    </div>
+                    </Link>
                 )
               }
               
