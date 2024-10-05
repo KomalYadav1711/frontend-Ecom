@@ -44,6 +44,26 @@ const SummaryApi = {
         url: `${backendDomain}/api/get-categoryProduct`,
         method: "GET"
     },
+    categoryWiseProduct :{
+        url: `${backendDomain}/api/category-product`,
+        method: "POST"
+    },
+    productDetails :{
+        url: `${backendDomain}/api/product-details`,
+        method: "POST"
+    },
+    addToCartProduct :{
+        url: `${backendDomain}/api/addtocart`,
+        method: "POST"
+    },
+    addToCartProductCount :{
+        url: `${backendDomain}/api/countAddToCartProduct`,
+        method: "GET"
+    },
+
+
+
+
 
    
 }
