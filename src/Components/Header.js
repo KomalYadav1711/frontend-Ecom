@@ -43,8 +43,16 @@ const Header = () => {
         toast.error(data.message)
       }
     }
+const handleSearch =(e)=>{
+  const {value} = e.target
 
-    console.log("header add to cart count", context)
+  if(value){
+    navigate(`/search?q=${value}`)
+  }else{
+    navigate("/search")
+  }
+
+}
   return (
    <header className='h-16 shadow-md bg-white fixed w-full z-40'>
         <div className=' h-full container mx-auto flex items-center  justify-between px-10'>
@@ -56,7 +64,7 @@ const Header = () => {
                 </div>
 
             <div className=' hidden lg:flex justify-between w-full items-center max-w-sm border rounded-full focus-within:shadow-md pl-4'>
-              <input type='text' placeholder='search product here...' className='w-full outline-none rounded-l-full '></input>
+              <input type='text' placeholder='search product here...' className='w-full outline-none rounded-l-full 'onChange={handleSearch}></input>
               <div className='min-w-[50px] h-8 bg-red-600 flex items-center justify-center rounded-r-full text-white text-lg'>
                 <GrSearch />
               </div>
