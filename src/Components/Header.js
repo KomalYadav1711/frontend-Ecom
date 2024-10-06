@@ -3,7 +3,7 @@ import Logo from '../Components/Logo'
 import { GrSearch } from "react-icons/gr";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link, useNavigate} from 'react-router-dom';
+import { Link, useLocation, useNavigate} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import SummaryApi from '../common';
 import { toast } from 'react-toastify';
@@ -19,6 +19,13 @@ const Header = () => {
     const [menuDisplay, setMenuDisplay] = useState(false);
     const context = useContext(Context)
     const navigate = useNavigate()
+    const searchInput = useLocation()
+    const URLSearch  = new URLSearchParams(searchInput?.search)
+    const searchQuery = URLSearch.getAll("q")
+    const [search, setSearch] = useState(searchInput?.search.split("=")[1])
+
+
+    
 
 
 
@@ -45,6 +52,7 @@ const Header = () => {
     }
 const handleSearch =(e)=>{
   const {value} = e.target
+  setSearch(value)
 
   if(value){
     navigate(`/search?q=${value}`)
@@ -64,7 +72,7 @@ const handleSearch =(e)=>{
                 </div>
 
             <div className=' hidden lg:flex justify-between w-full items-center max-w-sm border rounded-full focus-within:shadow-md pl-4'>
-              <input type='text' placeholder='search product here...' className='w-full outline-none rounded-l-full 'onChange={handleSearch}></input>
+              <input type='text' placeholder='search product here...' className='w-full outline-none rounded-l-full 'onChange={handleSearch} value={search}></input>
               <div className='min-w-[50px] h-8 bg-red-600 flex items-center justify-center rounded-r-full text-white text-lg'>
                 <GrSearch />
               </div>

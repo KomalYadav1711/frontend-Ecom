@@ -73,9 +73,13 @@ const SummaryApi = {
         url: `${backendDomain}/api/delete-cart-product`,
         method: "POST"
     },
-    seardhProduct :{
+    searchProduct :{
         url: `${backendDomain}/api/search`,
         method: "GET"
+    },
+    filterProduct :{
+        url: `${backendDomain}/api/filter-product`,
+        method: "POST"
     },
 
 
