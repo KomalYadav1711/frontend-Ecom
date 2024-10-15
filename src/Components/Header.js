@@ -62,7 +62,7 @@ const handleSearch =(e)=>{
 
 }
   return (
-   <header className='h-16 shadow-md bg-white fixed w-full z-40'>
+   <header className='h-16 shadow-md bg-[#091f3f] fixed w-full z-40'>
         <div className=' h-full container mx-auto flex items-center  justify-between px-10'>
                 <div className=''>
                   <Link to={"/"}>
@@ -71,9 +71,9 @@ const handleSearch =(e)=>{
                   </Link>
                 </div>
 
-            <div className=' hidden lg:flex justify-between w-full items-center max-w-sm border rounded-full focus-within:shadow-md pl-4'>
-              <input type='text' placeholder='search product here...' className='w-full outline-none rounded-l-full 'onChange={handleSearch} value={search}></input>
-              <div className='min-w-[50px] h-8 bg-red-600 flex items-center justify-center rounded-r-full text-white text-lg'>
+            <div className=' hidden lg:flex justify-between w-full items-center max-w-sm border rounded-full focus-within:shadow-md pl-2'>
+              <input type='text' placeholder='search product here...' className='w-full px-4 outline-none rounded-l-full bg-[#0e2548] placeholder-[#FFFFF0]'onChange={handleSearch} value={search}></input>
+              <div className='min-w-[50px] h-8 bg-[#eeb934] flex items-center justify-center rounded-r-full text-[#FFFFF0] text-lg '>
                 <GrSearch />
               </div>
             </div>
@@ -88,7 +88,7 @@ const handleSearch =(e)=>{
                         user?.profilePic ? (
                       <img src={user?.profilePic} className='w-10 h-10 rounded-full' alt= {user?.name}/>
                       ) : (
-                        <FaRegUserCircle />
+                        <FaRegUserCircle className='text-white'/>
                       )
                       }
                     
@@ -118,10 +118,10 @@ const handleSearch =(e)=>{
                 user?._id && (
                   <Link to={"/cart"} className='text-2xl relative '>
 
-                        <span><FaShoppingCart/></span>
+                        <span><FaShoppingCart className='text-white'/></span>
 
 
-                        <div className='bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center absolute -top-2 -right-3'>
+                        <div className='bg-[#eeb934] text-black rounded-full w-5 h-5 flex items-center justify-center absolute -top-2 -right-3'>
                           <p className='text-sm'>{context?.cartProductCount}</p>
                         </div>
                     </Link>
@@ -133,9 +133,9 @@ const handleSearch =(e)=>{
             <div >
             {
               user?._id ?(
-                <button onClick={handleLogout} className='bg-red-600 px-3 py-1 rounded-full text-white hover:bg-red-700'>Logout</button>
+                <button onClick={handleLogout} className='bg-[#eeb934] px-3 py-1 rounded-full text-black hover:bg-[#f0c65c]'>Logout</button>
               ) :(
-                <Link to={"/Login"} className='bg-red-600 px-3 py-1 rounded-full text-white hover:bg-red-700'>
+                <Link to={"/Login"} className='bg-[#eeb934] px-3 py-1 rounded-full text-[#FFFFF0] hover:bg-[#f0c65c]'>
                   Login
               </Link>
               )

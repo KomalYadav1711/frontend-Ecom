@@ -1,16 +1,16 @@
 const productCategory = [
-    { id : 1, label : "Airpodes", value: "airpodes"},
-    { id : 2, label : "Camera", value: "camera"},
-    { id : 3, label : "Earphones", value: "earphones"},
-    { id : 4, label : "Mobiles", value: "mobiles"},
-    { id : 5, label : "Mouse", value: "mouse"},
-    { id : 6, label : "Printers", value: "printers"},
-    { id : 7, label : "Processor", value: "processor"},
-    { id : 8, label : "Refrigerator", value: "refrigerator"},
-    { id : 9, label : "Speakers", value: "speakers"},
-    { id : 10, label : "Televisions", value: "televisions"},
-    { id : 11, label : "Watches", value: "watches"},
-    { id : 12, label : "Trimmers", value: "trimmers"},
+    { id : 1, label : "Earthenware", value: "earthenware"},
+    { id : 2, label : "Stoneware", value: "stoneware"},
+    { id : 3, label : "Raku", value: "raku"},
+    { id : 4, label : "Majolica", value: "majolica"},
+    { id : 5, label : "Bone China", value: "bonechina"},
+    { id : 6, label : "Faience", value: "faience"},
+    { id : 7, label : "Delftware", value: "delftware"},
+    { id : 8, label : "Sgraffito", value: "sgraffito"},
+    { id : 9, label : "Celtic", value: "celtic"},
+    { id : 10, label : "Redware", value: "redware"},
+    //{ id : 11, label : "Watches", value: "watches"},
+    //{ id : 12, label : "Trimmers", value: "trimmers"},
   
   
 

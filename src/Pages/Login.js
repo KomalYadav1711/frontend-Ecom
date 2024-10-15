@@ -68,10 +68,10 @@ const Login = () => {
 
   console.log("data login", data)
   return (
-    <section id='login'>
-        <div className=' mx-auto container p-4'>
+    <section id='login'  className='bg-[#F2EAD3]'>
+        <div className=' mx-auto container p-4 bg-[#F2EAD3]'>
         
-            <div className='bg-white w-full p-4 py-5 max-w-md  mx-auto rounded h-full '>
+            <div className='bg-[#F2EAD3] w-full p-4 py-5 max-w-md  mx-auto rounded h-full '>
                     <div className='w-20 h-20 mx-auto'>
                         <img src= {LoginIcons} alt='login icons'></img>
                     </div>
@@ -79,7 +79,7 @@ const Login = () => {
                     <form className='pt-6 flex flex-col gap-2 ' onSubmit={handleSubmit}  >
                           <div>
                             <label>Email : </label>
-                            <div className='bg-slate-100 p-2'> 
+                            <div className='bg-[#F2EAD3] border border-black p-2 rounded-lg'> 
                                   <input type='text'
                                   name='email'
                                   value={data.email}
@@ -91,9 +91,9 @@ const Login = () => {
                             
                           </div>
 
-                          <div >
+                          <div className='grid'>
                             <label>Password : </label>
-                            <div className='bg-slate-100 p-2 flex '>
+                            <div className='flex bg-[#F2EAD3] border border-black p-2 rounded-lg placeholder-[#6F4E37] '>
                                   <input type={Showpassword ? "text" : "password"}
                                   name='password'
                                   value={data.password}
@@ -118,17 +118,17 @@ const Login = () => {
                                       </span>
                                   </div>
                             </div>
-                            <Link to={'/forgot-password'} className='w-fit ml-auto block hover:text-red-600 hover:underline'>
+                            <Link to={'/forgot-password'} className='w-fit ml-auto block hover:text-[#3F2305] hover:underline'>
                               Forgot Password
                             </Link>
                             
 
                           </div>
 
-                         <button className=' bg-red-600 px-5 py-2 hover:bg-red-700 text-white w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-4'>Login</button>
+                         <button className=' bg-[#6F4E37] border-2 border-black px-5 py-2 hover:bg-[#3F2305] text-white w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-4'>Login</button>
 
                     </form>
-                    <p className='py-7'>Don't have account ? <Link to={'/signup'} className='text-red-600 hover:text-red-700 hover:underline'>Sign up</Link></p>
+                    <p className='py-7'>Don't have account ? <Link to={'/signup'} className=' text-black hover:text-[#3F2305] hover:underline'>Sign up</Link></p>
               </div>
 
            
