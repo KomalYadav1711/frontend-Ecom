@@ -70,7 +70,7 @@ function App() {
        />
 
       <Header/>
-      <main className='min-h-[calc(100vh-100px)]  bg-[#6184ba] pt-16'>
+      <main className='min-h-[calc(100vh-100px)] bg-[#6184ba] pt-16'>
         <Outlet />  
       </main>
       <Footer/>

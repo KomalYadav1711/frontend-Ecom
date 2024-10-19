@@ -98,9 +98,9 @@ const SignUp = () => {
 
   return (
     <section id='signup'>
-        <div className=' mx-auto container p-4 bg-[#e9eff9]'>
+        <div className=' mx-auto container p-4 bg-[#6184ba]'>
         
-            <div className='bg-[#e9eff9] border border-[#091f3f] w-full p-5  max-w-md mx-auto'>
+            <div className='bg-[#6184ba] border border-[#091f3f] w-full p-5  max-w-md mx-auto'>
                     <div className='w-20 h-20 mx-auto rounded-full overflow-hidden relative'>
                        <div>
                             <img src= { data.profilePic || LoginIcons} alt='login icons'></img>
@@ -118,42 +118,42 @@ const SignUp = () => {
                     <form className='pt-6 flex flex-col gap-2' onSubmit={handleSumbit}>
                           <div>
                             <label>Name : </label>
-                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg'> 
+                            <div className='bg-[#6184ba] border border-[#091f3f] p-2 rounded-lg'> 
                                   <input type='text'
                                   name='name'
                                   value={data.name}
                                   onChange={handleOnChange}
                                  // required
-                                   placeholder='enter name' 
-                                   className='w-full h-full outline-none bg-transparent '></input>
+                                   placeholder='Enter name' 
+                                   className='w-full h-full outline-none placeholder-black bg-transparent '></input>
                             </div>
                             
                           </div>
 
                           <div>
                             <label>Email : </label>
-                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg'> 
+                            <div className='bg-[#6184ba] border border-[#091f3f] p-2 rounded-lg'> 
                                   <input type='text'
                                   name='email'
                                   value={data.email}
                                   onChange={handleOnChange}
                                   required
-                                   placeholder='enter email' 
-                                   className='w-full h-full outline-none bg-transparent '></input>
+                                   placeholder='Enter email' 
+                                   className='w-full h-full outline-none placeholder-black bg-transparent '></input>
                             </div>
                             
                           </div>
 
                           <div >
                             <label>Password : </label>
-                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg flex '>
+                            <div className='bg-[#6184ba] border border-[#091f3f] p-2 rounded-lg flex '>
                                   <input type={Showpassword ? "text" : "password"}
                                   name='password'
                                   value={data.password}
                                   onChange={handleOnChange}
                                   required
-                                  placeholder='enter password' 
-                                  className='w-full h-full outline-none bg-transparent'></input>
+                                  placeholder='Enter password' 
+                                  className='w-full h-full outline-none placeholder-black bg-transparent'></input>
                                   <div className='cursor-pointer ' onClick={()=> setShowpassword((prev)=> !prev)}>
                                       <span>
                                         {
@@ -178,14 +178,14 @@ const SignUp = () => {
 
                           <div >
                             <label>Confirm Password : </label>
-                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg flex '>
+                            <div className='bg-[#6184ba] border border-[#091f3f] p-2 rounded-lg flex '>
                                   <input type={Confirmpassword ? "text" : "password"}
                                   name='confirmPassword'
                                   value={data.confirmPassword}
                                   onChange={handleOnChange}
                                   required
-                                  placeholder='enter confirm password' 
-                                  className='w-full h-full outline-none bg-transparent'></input>
+                                  placeholder='Enter confirm password' 
+                                  className='w-full h-full outline-none placeholder-black bg-transparent'></input>
                                   <div className='cursor-pointer ' onClick={()=> setConfirmpassword((prev)=> !prev)}>
                                       <span>
                                         {
