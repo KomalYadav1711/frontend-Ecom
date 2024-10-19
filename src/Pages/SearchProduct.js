@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import SummaryApi from '../common'
 import VerticalCard from '../Components/VerticalCard'
 
@@ -8,11 +8,11 @@ const SearchProduct = () => {
     const[data, setData] = useState([])
     const [loading, setLoading]= useState(false)
 
-    console.log("query", query.search)
+    
 
     const fetchProduct = async() =>{
         setLoading(true)
-        const response = await fetch(SummaryApi.seardhProduct.url+query.search)
+        const response = await fetch(SummaryApi.searchProduct.url+query.search)
         const dataResponse = await response.json()
         setLoading(false)
 
@@ -33,7 +33,7 @@ const SearchProduct = () => {
         <p className='text-lg font-semibold my-3'>Search Results: {data.length}</p>
         {
             data.length === 0 && !loading &&(
-                <p className='bg-white text-lg text-center p-4'>No Data Found...</p>
+                <p className='bg-[#c8d7ee] text-lg text-center p-4'>No Data Found...</p>
 
             )
         }

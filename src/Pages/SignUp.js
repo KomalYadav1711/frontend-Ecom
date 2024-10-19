@@ -63,7 +63,7 @@ const SignUp = () => {
     e.preventDefault();
 
     if(data.password === data.confirmPassword){
-      console.log("SummaryApi.signUP.url", SummaryApi.signUP.url)
+    
 
       const dataResponse = await fetch(SummaryApi.signUP.url,{
         method: SummaryApi.signUP.method,
@@ -87,7 +87,7 @@ const SignUp = () => {
 
       }
       
-      console.log("data", dataApi)
+     
     }
     else{
       toast.error("Please check password and confirm password")
@@ -97,10 +97,10 @@ const SignUp = () => {
   }
 
   return (
-    <section id='login'>
-        <div className=' mx-auto container p-4'>
+    <section id='signup'>
+        <div className=' mx-auto container p-4 bg-[#e9eff9]'>
         
-            <div className='bg-white w-full p-4 py-5 max-w-sm mx-auto'>
+            <div className='bg-[#e9eff9] border border-[#091f3f] w-full p-5  max-w-md mx-auto'>
                     <div className='w-20 h-20 mx-auto rounded-full overflow-hidden relative'>
                        <div>
                             <img src= { data.profilePic || LoginIcons} alt='login icons'></img>
@@ -118,7 +118,7 @@ const SignUp = () => {
                     <form className='pt-6 flex flex-col gap-2' onSubmit={handleSumbit}>
                           <div>
                             <label>Name : </label>
-                            <div className='bg-slate-100 p-2'> 
+                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg'> 
                                   <input type='text'
                                   name='name'
                                   value={data.name}
@@ -132,7 +132,7 @@ const SignUp = () => {
 
                           <div>
                             <label>Email : </label>
-                            <div className='bg-slate-100 p-2'> 
+                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg'> 
                                   <input type='text'
                                   name='email'
                                   value={data.email}
@@ -146,7 +146,7 @@ const SignUp = () => {
 
                           <div >
                             <label>Password : </label>
-                            <div className='bg-slate-100 p-2 flex '>
+                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg flex '>
                                   <input type={Showpassword ? "text" : "password"}
                                   name='password'
                                   value={data.password}
@@ -178,7 +178,7 @@ const SignUp = () => {
 
                           <div >
                             <label>Confirm Password : </label>
-                            <div className='bg-slate-100 p-2 flex '>
+                            <div className='bg-[#e9eff9] border border-[#091f3f] p-2 rounded-lg flex '>
                                   <input type={Confirmpassword ? "text" : "password"}
                                   name='confirmPassword'
                                   value={data.confirmPassword}
@@ -209,10 +209,10 @@ const SignUp = () => {
                           </div>
 
 
-                         <button className=' bg-red-600 px-5 py-2 hover:bg-red-700 text-white w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-4'>Sign Up</button>
+                         <button className=' bg-[#eeb934] border-2 border-[#091f3f] px-5 py-2  hover:bg-[#f0c65c] text-black w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-4'>Sign Up</button>
 
                     </form>
-                    <p className='py-7'>Already have account ? <Link to={'/login'} className='text-red-600 hover:text-red-700 hover:underline'>Login</Link></p>
+                    <p className='py-7'>Already have account ? <Link to={'/login'} className='text-black hover:text-[#091f3f] hover:underline'>Login</Link></p>
               </div>
 
            

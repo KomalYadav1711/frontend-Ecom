@@ -26,7 +26,7 @@ const AllUsers = () => {
 
     const dataResponse = await fetchData.json()
 
-    console.log("User data - ", dataResponse)
+    
 
     if( dataResponse.success){
       setAllUsers(dataResponse.data)
@@ -46,7 +46,7 @@ const AllUsers = () => {
    <div className='pb-4 bg-white'>
       <table className='w-full userTable'>
           <thead>
-              <tr className='bg-black text-white'>
+              <tr className='bg-[#103a75] text-white'>
                   <th>Sr.</th>
                   <th>Name</th>
                   <th>Email</th>

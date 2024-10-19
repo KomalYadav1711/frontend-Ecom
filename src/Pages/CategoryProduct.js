@@ -5,7 +5,7 @@ import VerticalCard from '../Components/VerticalCard'
 import SummaryApi from '../common'
 
 const CategoryProduct = () => {
-    const params = useParams()
+    
     const [data,setData] = useState([])
     const navigate = useNavigate()
     const [loading,setLoading] = useState(false)
@@ -22,6 +22,7 @@ const CategoryProduct = () => {
     const [filterCategoryList,setFilterCategoryList] = useState([])
     const [sortBy,setSortBy] = useState("")
     const fetchData = async()=>{
+      setLoading(true);
       const response = await fetch(SummaryApi.filterProduct.url,{
         method : SummaryApi.filterProduct.method,
         headers : {
@@ -34,6 +35,7 @@ const CategoryProduct = () => {
 
       const dataResponse = await response.json()
       setData(dataResponse?.data || [])
+      setLoading(false);
     }
 
     const handleSelectCategory = (e) =>{
@@ -97,10 +99,10 @@ const CategoryProduct = () => {
        {/***desktop version */}
        <div className='hidden lg:grid grid-cols-[200px,1fr]'>
            {/***left side */}
-           <div className='bg-white p-2 min-h-[calc(100vh-120px)] overflow-y-scroll'>
+           <div className='bg-[#0d2f63] text-white p-2 min-h-[calc(100vh-120px)] overflow-y-scroll'>
                 {/**sort by */}
                 <div className=''>
-                    <h3 className='text-base uppercase font-medium text-slate-500 border-b pb-1 border-slate-300'>Sort by</h3>
+                    <h3 className='text-base uppercase font-medium text-slate-400 border-b pb-1 border-slate-300'>Sort by</h3>
 
                     <form className='text-sm flex flex-col gap-2 py-2'>
                         <div className='flex items-center gap-3'>
@@ -118,7 +120,7 @@ const CategoryProduct = () => {
 
                 {/**filter by */}
                 <div className=''>
-                    <h3 className='text-base uppercase font-medium text-slate-500 border-b pb-1 border-slate-300'>Category</h3>
+                    <h3 className='text-base uppercase font-medium text-slate-400 border-b pb-1 border-slate-300'>Category</h3>
 
                     <form className='text-sm flex flex-col gap-2 py-2'>
                         {
@@ -144,7 +146,7 @@ const CategoryProduct = () => {
 
              <div className='min-h-[calc(100vh-120px)] overflow-y-scroll max-h-[calc(100vh-120px)]'>
               {
-                  data.length !== 0 && !loading && (
+                  data.length !== 0 && (
                     <VerticalCard data={data} loading={loading}/>
                   )
               }

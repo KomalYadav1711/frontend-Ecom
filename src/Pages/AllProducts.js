@@ -12,7 +12,7 @@ const AllProducts = () => {
     const response = await fetch(SummaryApi.allProduct.url);
     const dataResponse = await response.json()
 
-    console.log("product", dataResponse)
+    
 
     setAllProduct(dataResponse?.data || [])
   }
@@ -24,9 +24,9 @@ const AllProducts = () => {
   return (
     <div>
 
-      <div className='bg-white py-2 px-4 flex justify-between items-center'>
-          <h2 className='font-bold text-lg'>All Product</h2>
-          <button className='border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all py-1 px-3 rounded-full' onClick={()=>setOpenUploadProduct(true)}>Upload Product</button>
+      <div className='bg-[#103a75] py-2 px-4 flex justify-between items-center'>
+          <h2 className='font-bold text-white text-lg'>All Product</h2>
+          <button className='border-2 border-[#eeb934] text-[#eeb934] hover:bg-[#f0c65c] hover:text-black transition-all py-1 px-3 rounded-full' onClick={()=>setOpenUploadProduct(true)}>Upload Product</button>
       </div>
 
       {/**all product  */}

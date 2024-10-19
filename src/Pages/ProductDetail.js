@@ -59,7 +59,7 @@ const ProductDetail = () => {
         setActiveImage(dataResponse?.data?.productImage[0])
     }
 
-    console.log("data", data)
+   
     useEffect(() =>{
         fetchProductDetails()
     }, [params])
@@ -104,8 +104,8 @@ const ProductDetail = () => {
            {/***product Image */}
           <div className='h-96 flex flex-col lg:flex-row-reverse gap-4'>
 
-                <div className='h-[300px] w-[300px] lg:h-96 lg:w-96 bg-slate-200 relative p-2'>
-                    <img src={activeImage} className='h-full w-full object-scale-down mix-blend-multiply' onMouseMove={handleZoomImage} onMouseLeave={handleLeaveImageZoom}/>
+                <div className='h-[300px] w-[300px] lg:h-96 lg:w-96 border border-[#091f3f] relative p-2'>
+                    <img src={activeImage} className='h-full w-full border border-[#091f3f] object-scale-down ' onMouseMove={handleZoomImage} onMouseLeave={handleLeaveImageZoom}/>
 
                     {/**product zoom */}
                     {
@@ -147,8 +147,8 @@ const ProductDetail = () => {
                         {
                             data?.productImage?.map((imgURL,index) =>{
                             return(
-                                <div className='h-20 w-20 bg-slate-200 rounded p-1' key={imgURL}>
-                                <img src={imgURL} className='w-full h-full object-scale-down mix-blend-multiply cursor-pointer' onMouseEnter={()=>handleMouseEnterProduct(imgURL)}  onClick={()=>handleMouseEnterProduct(imgURL)}/>
+                                <div className='h-20 w-20  border border-[#091f3f] rounded p-1' key={imgURL}>
+                                <img src={imgURL} className='w-full h-full border border-[#091f3f] object-scale-down  cursor-pointer' onMouseEnter={()=>handleMouseEnterProduct(imgURL)}  onClick={()=>handleMouseEnterProduct(imgURL)}/>
                                 </div>
                             )
                             })
@@ -189,7 +189,7 @@ const ProductDetail = () => {
             ) : 
             (
               <div className='flex flex-col gap-1'>
-                <p className='bg-red-200 text-red-600 px-2 rounded-full inline-block w-fit'>{data?.brandName}</p>
+                <p className='bg-[#0d2f63] text-white p-1 px-2 rounded-full inline-block w-fit'>{data?.brandName}</p>
                 <h2 className='text-2xl lg:text-4xl font-medium ]'>{data?.productName}</h2>
                 <p className='capitalize text-[#6B6E6B]'>{data?.category}</p>
 
@@ -212,7 +212,7 @@ const ProductDetail = () => {
                 </div>
 
                 <div>
-                  <p className='text-slate-600 font-medium my-1'>Description : </p>
+                  <p className='text-black text-md font-medium my-1'>Description : </p>
                   <p>{data?.description}</p>
                 </div>
               </div>

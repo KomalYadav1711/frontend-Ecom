@@ -56,7 +56,7 @@ const UploadProduct = ({
   }
 
   const handleDeleteProductImage = async(index) =>{
-    console.log("image index", index)
+    
 
     const newProductImage = [...data.productImage]
     newProductImage.splice(index, 1)
@@ -72,7 +72,7 @@ const UploadProduct = ({
 {/**upload product */}
   const handleSubmit = async(e) =>{
     e.preventDefault()
-    console.log(data)
+   
 
     const response  = await fetch(SummaryApi.uploadProduct.url,{
       method: SummaryApi.uploadProduct.method,
@@ -98,10 +98,10 @@ const UploadProduct = ({
   }
   return (
     <div className='fixed w-full h-full bg-slate-200 bg-opacity-35 top-0 left-0 right-0 bottom-0 flex justify-center items-center'>
-      <div className='bg-white p-4 rounded w-full max-w-2xl h-full max-h-[80%] overflow-hidden' >
+      <div className='bg-[#c8d7ee] p-4 rounded w-full max-w-2xl h-full max-h-[80%] overflow-hidden' >
           <div className='flex justify-between items-center pb-3'>
             <h2 className='font-bold text-lg'>Upload Product</h2>
-            <div className='w-fit ml-auto text-2xl hover:text-red-600 cursor-pointer ' onClick={onClose}>
+            <div className='w-fit ml-auto text-2xl hover:scale-110 cursor-pointer ' onClick={onClose}>
                <IoMdClose />
             </div>
           </div>
@@ -114,7 +114,7 @@ const UploadProduct = ({
             name='productName'
             value={data.productName} 
             onChange={handleOnChange}
-            className='p-2 bg-slate-100 border rounded'
+            className='p-2 bg-[#e9eff9] border rounded'
             required
             ></input>
 
@@ -126,13 +126,13 @@ const UploadProduct = ({
             name='brandName'
             value={data.brandName} 
             onChange={handleOnChange}
-            className='p-2 bg-slate-100 border rounded'
+            className='p-2 bg-[#e9eff9] border rounded'
             required
 
             ></input>
 
             <label htmlFor='category' className='mt-3'>Category :</label>
-            <select required value={data.category} name='category' onChange={handleOnChange} className='p-2 bg-slate-100 border rounded' >
+            <select required value={data.category} name='category' onChange={handleOnChange} className='p-2 bg-[#e9eff9] border rounded' >
                 <option value={""} >Select Category</option>
               {
                 productCategory.map((el, index) =>{
@@ -145,9 +145,9 @@ const UploadProduct = ({
 
             <label htmlFor='productImage' className='mt-3'>Product Image :</label>
             <label htmlFor='uploadImageInput'>
-            <div className='p-2 bg-slate-100 border rounded h-32 w-full flex justify-center items-center cursor-pointer'>
+            <div className='p-2 bg-[#e9eff9] border rounded h-32 w-full flex justify-center items-center cursor-pointer'>
             
-                <div className='text-slate-500 flex justify-center items-center flex-col'>
+                <div className='text-[#091f3f]  flex justify-center items-center flex-col'>
                     <span className='text-3xl'><FaCloudUploadAlt /></span>
                     <p className='text-sm'>Upload Product Image </p>
                     <input type='file' id='uploadImageInput' className='hidden' onChange={handleUploadProduct}></input>
@@ -168,13 +168,13 @@ const UploadProduct = ({
                                 alt={el}
                                 width={80} 
                                 height={80}
-                                className='bg-slate-100 border cursor-pointer' 
+                                className='bg-[#e9eff9] border cursor-pointer' 
                                 onClick={() =>{
                                   setOpenFullScreenImage(true)
                                   setFullScreenImage(el)
                                   }}/>
                                   {/***hidden deletion is not working -------*/}
-                                  <div className='absolute  bottom-0 right-0 p-1 text-white bg-red-600 rounded-full hidden group-hover:flex cursor-pointer z-10 outline outline-2 outline-blue-500' onClick={()=>handleDeleteProductImage(index)} >
+                                  <div className='absolute  bottom-0 right-0 p-1 text-white bg-[#091f3f] rounded-full hidden group-hover:flex cursor-pointer z-10 outline outline-2 outline-blue-400' onClick={()=>handleDeleteProductImage(index)} >
                                           <MdDelete/>  
                                   </div>
                            </div>
@@ -185,7 +185,7 @@ const UploadProduct = ({
                     </div>
 
                   ) :(
-                    <p className='text-red-600 text-xs'>*Please upload product image</p>
+                    <p className='text-black text-xs'>*Please upload product image</p>
                   )
                 }
              
@@ -199,7 +199,7 @@ const UploadProduct = ({
                 value={data.price} 
                 name='price'
                 onChange={handleOnChange}
-                className='p-2 bg-slate-100 border rounded'
+                className='p-2 bg-[#e9eff9] border rounded'
                 required
               />
 
@@ -211,13 +211,13 @@ const UploadProduct = ({
                 value={data.sellingPrice} 
                 name='sellingPrice'
                 onChange={handleOnChange}
-                className='p-2 bg-slate-100 border rounded'
+                className='p-2 bg-[#e9eff9] border rounded'
                 required
               />
 
               <label htmlFor='description' className='mt-3'>Description :</label>
               <textarea 
-                className='h-28 bg-slate-100 border resize-none p-1' 
+                className='h-28 bg-[#e9eff9] border resize-none p-1' 
                 placeholder='enter product description' 
                 rows={3} 
                 onChange={handleOnChange} 
@@ -226,7 +226,7 @@ const UploadProduct = ({
               >
               </textarea>
 
-            <button className='px-3 py-2 bg-red-600 text-white mb-10 hover:bg-red-700 '>Upload Product</button>
+            <button className='px-3 py-2 bg-[#eeb934] hover:bg-[#f0c65c]'>Upload Product</button>
 
 
             

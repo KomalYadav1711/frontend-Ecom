@@ -40,7 +40,7 @@ function App() {
 
     const dataApi = await dataResponse.json()
     setCartProductCount(dataApi?.data?.count)
-    console.log("dataapi", dataApi)
+    
 
     if(dataApi.success){
       dispatch(setUserDetails(dataApi.data))
@@ -70,7 +70,7 @@ function App() {
        />
 
       <Header/>
-      <main className='min-h-[calc(100vh-100px)]  bg-[#ebf0f8] pt-16'>
+      <main className='min-h-[calc(100vh-100px)]  bg-[#6184ba] pt-16'>
         <Outlet />  
       </main>
       <Footer/>

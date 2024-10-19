@@ -62,19 +62,19 @@ const handleSearch =(e)=>{
 
 }
   return (
-   <header className='h-16 shadow-md bg-[#091f3f] fixed w-full z-40'>
+   <header className='h-16 shadow-md bg-[#0E1A57] fixed w-full z-40'>
         <div className=' h-full container mx-auto flex items-center  justify-between px-10'>
                 <div className=''>
                   <Link to={"/"}>
-                      <Logo w={90} h= {50} />
+                      <Logo w={100} h= {60} />
 
                   </Link>
                 </div>
 
             <div className=' hidden lg:flex justify-between w-full items-center max-w-sm border rounded-full focus-within:shadow-md pl-2'>
-              <input type='text' placeholder='search product here...' className='w-full px-4 outline-none rounded-l-full bg-[#0e2548] placeholder-[#FFFFF0]'onChange={handleSearch} value={search}></input>
-              <div className='min-w-[50px] h-8 bg-[#eeb934] flex items-center justify-center rounded-r-full text-[#FFFFF0] text-lg '>
-                <GrSearch />
+              <input type='text' placeholder='search product here...' className='w-full px-4 outline-none rounded-l-full bg-[#0E1A57] text-white placeholder-white'onChange={handleSearch} value={search}></input>
+              <div className='min-w-[50px] h-8 bg-[#eeb934] flex items-center justify-center rounded-r-full text-white text-lg '>
+                <GrSearch className='text-black'/>
               </div>
             </div>
 
@@ -99,11 +99,11 @@ const handleSearch =(e)=>{
               
                 {
                   menuDisplay && (
-                    <div className='absolute bg-white bottom-0 top-11 h-fit p-2 shadow-lg rounded'>
+                    <div className='absolute bg-[#c8d7ee] bottom-0 top-11 h-fit p-2 shadow-lg rounded'>
                       <nav>
                       {
                         user?.role === ROLE.ADMIN && (
-                          <Link to={"admin-panel/all-products"} className='whitespace-nowrap  md:block hover:bg-slate-100' onClick={()=>setMenuDisplay(preve => !preve)} >Admin Panel</Link>
+                          <Link to={"admin-panel/all-products"} className='whitespace-nowrap  md:block hover:bg-[#c8d7ee]' onClick={()=>setMenuDisplay(preve => !preve)} >Admin Panel</Link>
                         )
                       }
                         
@@ -135,7 +135,7 @@ const handleSearch =(e)=>{
               user?._id ?(
                 <button onClick={handleLogout} className='bg-[#eeb934] px-3 py-1 rounded-full text-black hover:bg-[#f0c65c]'>Logout</button>
               ) :(
-                <Link to={"/Login"} className='bg-[#eeb934] px-3 py-1 rounded-full text-[#FFFFF0] hover:bg-[#f0c65c]'>
+                <Link to={"/Login"} className='bg-[#eeb934] px-3 py-1 rounded-full text-black  hover:bg-[#f0c65c]'>
                   Login
               </Link>
               )
