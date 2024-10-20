@@ -1,4 +1,4 @@
-const backendDomain = "http://localhost:8080"
+const backendDomain = "https://claynest-backend.vercel.app"
 
 const SummaryApi = {
     signUP : {
